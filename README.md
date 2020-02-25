@@ -7,6 +7,11 @@ Tika is a project of the [Apache Software Foundation](https://www.apache.org).
 
 Apache Tika, Tika, Apache, the Apache feather logo, and the Apache Tika project logo are trademarks of The Apache Software Foundation.
 
+Fork reasoning
+--------------
+
+Default Apache Tika fails to determine encoding of russian text documents which have code page 1251. This fork fizes this problem.
+
 Getting Started
 ---------------
 
