@@ -10,7 +10,7 @@ Apache Tika, Tika, Apache, the Apache feather logo, and the Apache Tika project 
 Fork reasoning
 --------------
 
-Default Apache Tika fails to determine encoding of russian text documents which have code page 1251. This fork fizes this problem.
+Default Apache Tika fails to determine encoding of russian text documents which have code page 1251. This fork fixes this problem.
 
 Getting Started
 ---------------
