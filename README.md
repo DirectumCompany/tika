@@ -10,7 +10,7 @@ Apache Tika, Tika, Apache, the Apache feather logo, and the Apache Tika project 
 Fork reasoning
 --------------
 
-Default Apache Tika fails to determine encoding of russian text documents which have code page 1251. This fork fixes this problem.
+Default Apache Tika fails to determine encoding of russian text documents which have code page 1251. This fork fixes this problem by extending supported ASCII-characters range (the default implementation checks only for characters with codes lower than 127).
 
 Getting Started
 ---------------
@@ -34,37 +34,37 @@ To contribute a patch, follow these instructions (note that installing
 [Hub](https://hub.github.com) is not strictly required, but is recommended).
 
 ```
-Download and install hub.github.com
-File JIRA issue for your fix at https://issues.apache.org/jira/browse/TIKA
+0. Download and install hub.github.com
+1. File JIRA issue for your fix at https://issues.apache.org/jira/browse/TIKA
 - you will get issue id TIKA-xxx where xxx is the issue ID.
-git clone https://github.com/apache/tika.git 
-cd tika
-git checkout -b TIKA-xxx
-edit files
-git status (make sure it shows what files you expected to edit)
-git add <files>
-git commit -m “fix for TIKA-xxx contributed by <your username>”
-git fork
-git push -u <your git username> TIKA-xxx
-git pull-request
+2. git clone https://github.com/apache/tika.git 
+3. cd tika
+4. git checkout -b TIKA-xxx
+5. edit files
+6. git status (make sure it shows what files you expected to edit)
+7. git add <files>
+8. git commit -m “fix for TIKA-xxx contributed by <your username>”
+9. git fork
+10. git push -u <your git username> TIKA-xxx
+11. git pull-request
 ```
 
 Building from a Specific Tag
 =======================
 Let's assume that you want to build the 1.22 tag:
 ```
-Download and install hub.github.com
-git clone https://github.com/apache/tika.git 
-cd tika
-git checkout 1.22
-mvn clean install
+0. Download and install hub.github.com
+1. git clone https://github.com/apache/tika.git 
+2. cd tika
+3. git checkout 1.22
+4. mvn clean install
 ```
 
 If a new vulnerability has been discovered between the date of the 
 tag and the date you are building the tag, you may need to build with:
 
 ```
-mvn clean install -Dossindex.fail=false
+4. mvn clean install -Dossindex.fail=false
 ```
 
 If a local test is not working in your environment, please notify
@@ -72,7 +72,7 @@ If a local test is not working in your environment, please notify
  you can turn off individual tests with e.g.: 
 
 ```
-mvn clean install -Dossindex.fail=false -Dtest=\!UnpackerResourceTest#testPDFImages
+4. mvn clean install -Dossindex.fail=false -Dtest=\!UnpackerResourceTest#testPDFImages
 ```
 
 License (see also LICENSE.txt)
