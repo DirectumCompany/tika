@@ -72,7 +72,7 @@ If a local test is not working in your environment, please notify
  you can turn off individual tests with e.g.: 
 
 ```
-4. mvn clean install -Dossindex.fail=false -Dtest=\!UnpackerResourceTest#testPDFImages
+mvn clean install -Dossindex.fail=false -Dtest=\!UnpackerResourceTest#testPDFImages
 ```
 
 License (see also LICENSE.txt)
